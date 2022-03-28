@@ -2,7 +2,7 @@
   position: relative;
   max-width: 1280px;
   width: 100%;
-  background-image: url("/shelter/assets/images/start-screen-background.jpg");
+  background-image: url("../../assets/images/start-screen-background.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   height: 908px;
@@ -195,7 +195,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 40px;
+  margin: 0 auto;
 }
 
 .about .about-content {
@@ -252,7 +252,7 @@
           align-items: center;
   padding-top: 48px;
   background-color: #f6f6f6;
-  margin: 0 40px;
+  margin: 0 auto;
 }
 
 .pets .heading {
@@ -490,7 +490,7 @@
   width: 100%;
   min-height: 465px;
   background-color: #f6f6f6;
-  margin: 0 40px;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -619,8 +619,8 @@ footer {
   max-width: 1280px;
   width: 100%;
   min-height: 350px;
-  margin: 0 40px;
-  background-image: url("/shelter/assets/images/footer-gradient-background.png");
+  margin: 0 auto;
+  background-image: url("../../assets/images/footer-gradient-background.png");
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;

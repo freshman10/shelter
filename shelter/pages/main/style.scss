@@ -9,7 +9,7 @@ $dark-color-1: #4c4c4c;
   position: relative;
   max-width: 1280px;
   width: 100%;
-  background-image: url("../shelter/assets/images/start-screen-background.jpg");
+  background-image: url("../../assets/images/start-screen-background.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   height: 908px;
@@ -163,7 +163,8 @@ $dark-color-1: #4c4c4c;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 40px;
+
+  margin: 0 auto;
 
   .about-content {
     max-width: 430px;
@@ -211,7 +212,7 @@ $dark-color-1: #4c4c4c;
   align-items: center;
   padding-top: 48px;
   background-color: #f6f6f6;
-  margin: 0 40px;
+  margin: 0 auto;
 
   .heading {
     max-width: 400px;
@@ -400,7 +401,7 @@ $dark-color-1: #4c4c4c;
   width: 100%;
   min-height: 465px;
   background-color: #f6f6f6;
-  margin: 0 40px;
+  margin: 0 auto;
   box-sizing: border-box;
 
   .donation-content {
@@ -506,8 +507,8 @@ footer {
   max-width: 1280px;
   width: 100%;
   min-height: 350px;
-  margin: 0 40px;
-  background-image: url("/shelter/assets/images/footer-gradient-background.png");
+  margin: 0 auto;
+  background-image: url("../../assets/images/footer-gradient-background.png");
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
