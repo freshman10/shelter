@@ -221,8 +221,8 @@ header .wrapper nav ul a:visited {
   width: 52px;
   height: 52px;
   border: 2px solid #cdcdcd;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: borgitder-box;
+          box-sizing: borgitder-box;
   border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
