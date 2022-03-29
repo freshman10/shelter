@@ -85,6 +85,7 @@
           justify-content: space-between;
   list-style: none;
   gap: 10px;
+  color: #cdcdcd;
 }
 
 .start-screen header .wrapper nav ul a {

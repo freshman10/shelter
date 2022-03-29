@@ -69,6 +69,7 @@ $dark-color-1: #4c4c4c;
           justify-content: space-between;
           list-style: none;
           gap: 10px;
+          color: $gray-color;
 
           a {
             text-decoration: none;
@@ -163,7 +164,6 @@ $dark-color-1: #4c4c4c;
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: 0 auto;
 
   .about-content {

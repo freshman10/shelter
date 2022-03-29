@@ -6,6 +6,8 @@ $dark-color: #545454;
 $dark-color-1: #4c4c4c;
 
 header {
+  position: sticky;
+  top: 0;
   max-width: 1280px;
   width: 100%;
   min-height: 120px;
@@ -72,9 +74,12 @@ header {
             color: #292929;
             font-size: 15px;
           }
+          &:link {
+            color: #545454;
+          }
 
           &:visited {
-            color: $gray-color;
+            color: #545454;
           }
         }
       }
@@ -132,6 +137,13 @@ header {
         border-radius: 9px;
         background-color: #fafafa;
 
+        &:hover {
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          button {
+            background-color: #f1cdb3;
+          }
+        }
+
         img {
           width: 270px;
           height: 270px;
@@ -177,25 +189,27 @@ header {
       display: flex;
       gap: 20px;
 
-      .active {
-        color: #292929;
-        border: 2px solid #f1cdb3;
+      .disabled {
+        color: $gray-color;
+        border: 2px solid #cdcdcd;
       }
 
-      .tabbed {
+      .active {
         background-color: #f1cdb3;
       }
 
       button {
         width: 52px;
         height: 52px;
-        border: 2px solid #cdcdcd;
+        border: 2px solid #f1cdb3;
+        color: #292929;
+
         box-sizing: borgitder-box;
         border-radius: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #cdcdcd;
+
         background: #f6f6f6;
 
         p {

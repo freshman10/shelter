@@ -8,7 +8,7 @@
     <title>Shelter</title>
   </head>
   <body>
-    <div class="start-screen">
+    <div class="start-screen" id="start">
       <header>
         <div class="wrapper">
           <div class="logo">
@@ -20,7 +20,7 @@
               <li>
                 <a class="--active-nav" href="#about">About the shelter</a>
               </li>
-              <li><a href="#pets">Our pets</a></li>
+              <li><a href="../pets/index.html#start">Our pets</a></li>
               <li><a href="#help">Help the shelter</a></li>
               <li><a href="#contacts">Contacts</a></li>
             </ul>
@@ -36,7 +36,7 @@
             anybody else in the world, you will see!
           </p>
           <form>
-            <button formaction="http://stackoverflow.com">Make a friend</button>
+            <button formaction="../pets/index.html#start">Make a friend</button>
           </form>
         </div>
         <img
@@ -92,7 +92,11 @@
           <img src="../../assets/images/ArrowR.png" alt="right-arrow" />
         </button>
       </div>
-      <button class="get-rest-btn">Get to know the rest</button>
+      <form>
+        <button formaction="../pets/index.html#start" class="get-rest-btn">
+          Get to know the rest
+        </button>
+      </form>
     </div>
     <div class="help" id="help">
       <div class="help-content">
@@ -151,7 +155,7 @@
           <p class="subheading">Name of the bank / Type of bank account</p>
           <div class="credit-card">
             <img src="../../assets/icons/credit-card.svg" />
-            <a href="">8380 2880 8028 8791 7435</a>
+            <a href="#" onclick="return false;">8380 2880 8028 8791 7435</a>
           </div>
           <p class="legal-info">
             Legal information and lorem ipsum dolor sit amet, consectetur

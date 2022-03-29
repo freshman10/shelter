@@ -1,4 +1,7 @@
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   max-width: 1280px;
   width: 100%;
   min-height: 120px;
@@ -87,8 +90,12 @@ header .wrapper nav ul a.--active-nav {
   font-size: 15px;
 }
 
+header .wrapper nav ul a:link {
+  color: #545454;
+}
+
 header .wrapper nav ul a:visited {
-  color: #cdcdcd;
+  color: #545454;
 }
 
 .pets {
@@ -163,6 +170,15 @@ header .wrapper nav ul a:visited {
   background-color: #fafafa;
 }
 
+.pets .pets-content .cards-container .card:hover {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.pets .pets-content .cards-container .card:hover button {
+  background-color: #f1cdb3;
+}
+
 .pets .pets-content .cards-container .card img {
   width: 270px;
   height: 270px;
@@ -208,19 +224,20 @@ header .wrapper nav ul a:visited {
   gap: 20px;
 }
 
-.pets .pets-content .navigation .active {
-  color: #292929;
-  border: 2px solid #f1cdb3;
+.pets .pets-content .navigation .disabled {
+  color: #cdcdcd;
+  border: 2px solid #cdcdcd;
 }
 
-.pets .pets-content .navigation .tabbed {
+.pets .pets-content .navigation .active {
   background-color: #f1cdb3;
 }
 
 .pets .pets-content .navigation button {
   width: 52px;
   height: 52px;
-  border: 2px solid #cdcdcd;
+  border: 2px solid #f1cdb3;
+  color: #292929;
   -webkit-box-sizing: borgitder-box;
           box-sizing: borgitder-box;
   border-radius: 100px;
@@ -233,7 +250,6 @@ header .wrapper nav ul a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #cdcdcd;
   background: #f6f6f6;
 }
 
