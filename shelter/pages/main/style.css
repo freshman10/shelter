@@ -1,8 +1,20 @@
-.start-screen {
+.wrapper-pets .pets .slider .left-btn:hover,
+.wrapper-pets .pets .slider .right-btn:hover, .wrapper-pets .pets .slider .cards .card:hover, .wrapper-pets .pets .slider .cards .card:hover button, .wrapper-pets .pets .get-rest-btn:hover, .wrapper-donation .donation .donation-content .content .credit-card:hover {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper-start {
+  width: 100%;
+  background-image: url("../../assets/images/start-screen-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.wrapper-start .start-screen {
   position: relative;
   max-width: 1280px;
   width: 100%;
-  background-image: url("../../assets/images/start-screen-background.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   height: 908px;
@@ -15,13 +27,13 @@
           align-items: flex-end;
 }
 
-.start-screen header {
+.wrapper-start .start-screen header {
   position: absolute;
   top: 33px;
   left: 40px;
 }
 
-.start-screen header .wrapper {
+.wrapper-start .start-screen header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +49,7 @@
   margin: 0 auto;
 }
 
-.start-screen header .wrapper .logo {
+.wrapper-start .start-screen header .wrapper .logo {
   width: 190px;
   height: 60px;
   display: -webkit-box;
@@ -49,7 +61,7 @@
           flex-direction: column;
 }
 
-.start-screen header .wrapper .logo h1 {
+.wrapper-start .start-screen header .wrapper .logo h1 {
   font: 32px "Georgia", serif;
   color: #f1cdb3;
   line-height: 35.2px;
@@ -59,7 +71,7 @@
   padding-top: 30px;
 }
 
-.start-screen header .wrapper .logo p {
+.wrapper-start .start-screen header .wrapper .logo p {
   font: 15px "Arial", serif;
   font-size: 13px;
   color: white;
@@ -69,13 +81,13 @@
   font-weight: 400px;
 }
 
-.start-screen header .wrapper nav {
+.wrapper-start .start-screen header .wrapper nav {
   width: 443px;
   height: 27px;
   padding-right: 40px;
 }
 
-.start-screen header .wrapper nav ul {
+.wrapper-start .start-screen header .wrapper nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,22 +100,26 @@
   color: #cdcdcd;
 }
 
-.start-screen header .wrapper nav ul a {
+.wrapper-start .start-screen header .wrapper nav ul a {
   text-decoration: none;
   color: #cdcdcd;
   font: 15px "Arial", serif;
 }
 
-.start-screen header .wrapper nav ul a.--active-nav {
+.wrapper-start .start-screen header .wrapper nav ul a.--active-nav {
   border-bottom: 3px solid #f1cdb3;
   padding-bottom: 4px;
 }
 
-.start-screen header .wrapper nav ul a:visited {
+.wrapper-start .start-screen header .wrapper nav ul a:visited {
   color: #cdcdcd;
 }
 
-.start-screen .wrapper-start-page {
+.wrapper-start .start-screen header .wrapper nav ul a:hover {
+  color: white;
+}
+
+.wrapper-start .start-screen .wrapper-start-page {
   max-width: 1200px;
   width: 100%;
   height: 728px;
@@ -120,7 +136,7 @@
   margin: 0 auto;
 }
 
-.start-screen .wrapper-start-page .content {
+.wrapper-start .start-screen .wrapper-start-page .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +155,7 @@
   margin-top: -78px;
 }
 
-.start-screen .wrapper-start-page .content .heading {
+.wrapper-start .start-screen .wrapper-start-page .content .heading {
   font: 32px "Georgia", serif;
   font-size: 44px;
   width: 310px;
@@ -149,7 +165,7 @@
   margin: 0;
 }
 
-.start-screen .wrapper-start-page .content .subheading {
+.wrapper-start .start-screen .wrapper-start-page .content .subheading {
   font: 15px "Arial", serif;
   font-weight: 400;
   font-size: 15px;
@@ -158,7 +174,7 @@
   line-height: 160%;
 }
 
-.start-screen .wrapper-start-page .content button {
+.wrapper-start .start-screen .wrapper-start-page .content button {
   width: 207px;
   height: 52px;
   background-color: #f1cdb3;
@@ -171,12 +187,12 @@
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.start-screen .wrapper-start-page .content button:hover {
+.wrapper-start .start-screen .wrapper-start-page .content button:hover {
   background-color: #fddcc4;
   cursor: pointer;
 }
 
-.start-screen .wrapper-start-page img {
+.wrapper-start .start-screen .wrapper-start-page img {
   max-width: 698px;
   width: auto;
   max-height: 728px;
@@ -237,7 +253,12 @@
   padding-right: 40px;
 }
 
-.pets {
+.wrapper-pets {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.wrapper-pets .pets {
   max-width: 1280px;
   width: 100%;
   min-height: 830px;
@@ -252,11 +273,10 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 48px;
-  background-color: #f6f6f6;
   margin: 0 auto;
 }
 
-.pets .heading {
+.wrapper-pets .pets .heading {
   max-width: 400px;
   width: 100%;
   min-height: 90px;
@@ -270,7 +290,7 @@
   padding-bottom: 23px;
 }
 
-.pets .slider {
+.wrapper-pets .pets .slider {
   max-width: 1200px;
   min-height: 435px;
   width: 100%;
@@ -285,8 +305,8 @@
           align-items: center;
 }
 
-.pets .slider .left-btn,
-.pets .slider .right-btn {
+.wrapper-pets .pets .slider .left-btn,
+.wrapper-pets .pets .slider .right-btn {
   width: 52px;
   height: 52px;
   border: 2px solid #f1cdb3;
@@ -297,19 +317,19 @@
   color: #292929;
 }
 
-.pets .slider .left-btn:hover,
-.pets .slider .right-btn:hover {
+.wrapper-pets .pets .slider .left-btn:hover,
+.wrapper-pets .pets .slider .right-btn:hover {
   background-color: #f1cdb3;
 }
 
-.pets .slider .cards {
+.wrapper-pets .pets .slider .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 90px;
 }
 
-.pets .slider .cards .card {
+.wrapper-pets .pets .slider .cards .card {
   max-width: 270px;
   width: 100%;
   min-height: 435px;
@@ -326,12 +346,19 @@
   background-color: #fafafa;
 }
 
-.pets .slider .cards .card:hover {
+.wrapper-pets .pets .slider .cards .card:hover {
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
 }
 
-.pets .slider .cards .card p {
+.wrapper-pets .pets .slider .cards .card:hover button {
+  cursor: pointer;
+  border: 2px solid #f1cdb3;
+  background-color: #f1cdb3;
+}
+
+.wrapper-pets .pets .slider .cards .card p {
   font: 32px "Georgia", serif;
   font-weight: 400;
   font-size: 20px;
@@ -342,7 +369,7 @@
   text-align: center;
 }
 
-.pets .slider .cards .card button {
+.wrapper-pets .pets .slider .cards .card button {
   width: 187px;
   height: 52px;
   border: 2px solid #f1cdb3;
@@ -359,12 +386,7 @@
   margin-top: 10px;
 }
 
-.pets .slider .cards .card button:hover {
-  border: 2px solid #f1cdb3;
-  background-color: #f1cdb3;
-}
-
-.pets .get-rest-btn {
+.wrapper-pets .pets .get-rest-btn {
   width: 261px;
   height: 52px;
   background-color: #f1cdb3;
@@ -378,7 +400,7 @@
   margin-top: 60px;
 }
 
-.pets .get-rest-btn:hover {
+.wrapper-pets .pets .get-rest-btn:hover {
   background-color: #fddcc4;
   cursor: pointer;
 }
@@ -486,17 +508,21 @@
   margin: 0;
 }
 
-.donation {
+.wrapper-donation {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.wrapper-donation .donation {
   max-width: 1280px;
   width: 100%;
   min-height: 465px;
-  background-color: #f6f6f6;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.donation .donation-content {
+.wrapper-donation .donation .donation-content {
   max-width: 915px;
   width: 100%;
   min-height: 282px;
@@ -514,13 +540,13 @@
   gap: 30px;
 }
 
-.donation .donation-content img {
+.wrapper-donation .donation .donation-content img {
   max-width: 505px;
   width: 100%;
   max-height: 261px;
 }
 
-.donation .donation-content .content {
+.wrapper-donation .donation .donation-content .content {
   max-width: 380px;
   width: 100%;
   min-height: 282px;
@@ -537,7 +563,7 @@
   gap: 20px;
 }
 
-.donation .donation-content .content .heading {
+.wrapper-donation .donation .donation-content .content .heading {
   max-width: 300px;
   width: 100%;
   min-height: 90px;
@@ -551,7 +577,7 @@
   padding: 0;
 }
 
-.donation .donation-content .content .subheading {
+.wrapper-donation .donation .donation-content .content .subheading {
   max-width: 307px;
   width: 100%;
   font: 32px "Georgia", serif;
@@ -564,13 +590,14 @@
   padding: 0;
 }
 
-.donation .donation-content .content .credit-card {
+.wrapper-donation .donation .donation-content .content .credit-card {
   max-width: 349px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #f1cdb3;
+  min-height: 43px;
   border-radius: 9px;
   display: flex;
   -webkit-box-pack: center;
@@ -580,14 +607,25 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -2px;
 }
 
-.donation .donation-content .content .credit-card img {
+.wrapper-donation .donation .donation-content .content .credit-card:hover {
+  background: #f1cdb3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.wrapper-donation .donation .donation-content .content .credit-card img {
   width: 30px;
   height: 23px;
 }
 
-.donation .donation-content .content .credit-card a {
+.wrapper-donation .donation .donation-content .content .credit-card a {
   font: 32px "Georgia", serif;
   font-weight: 400;
   font-size: 20px;
@@ -599,11 +637,11 @@
   text-decoration: none;
 }
 
-.donation .donation-content .content .credit-card a:visited {
+.wrapper-donation .donation .donation-content .content .credit-card a:visited {
   color: #545454;
 }
 
-.donation .donation-content .content .legal-info {
+.wrapper-donation .donation .donation-content .content .legal-info {
   max-width: 380px;
   width: 100%;
   min-height: 72px;
@@ -616,13 +654,18 @@
   padding: 0;
 }
 
-footer {
+.wrapper-footer {
+  width: 100%;
+  background-image: url("../../assets/images/footer-gradient-background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.wrapper-footer footer {
   max-width: 1280px;
   width: 100%;
   min-height: 350px;
   margin: 0 auto;
-  background-image: url("../../assets/images/footer-gradient-background.png");
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,7 +677,7 @@ footer {
           align-items: flex-end;
 }
 
-footer .footer-content {
+.wrapper-footer footer .footer-content {
   max-width: 1200px;
   width: 100%;
   min-height: 310px;
@@ -649,7 +692,7 @@ footer .footer-content {
           align-items: flex-start;
 }
 
-footer .footer-content .contacts {
+.wrapper-footer footer .footer-content .contacts {
   max-width: 279px;
   width: 100%;
   min-height: 234px;
@@ -666,12 +709,12 @@ footer .footer-content .contacts {
   margin-top: 17px;
 }
 
-footer .footer-content .contacts img {
+.wrapper-footer footer .footer-content .contacts img {
   width: 40px;
   height: 32px;
 }
 
-footer .footer-content .contacts p {
+.wrapper-footer footer .footer-content .contacts p {
   font: 32px "Georgia", serif;
   font-size: 20px;
   line-height: 23px;
@@ -680,7 +723,7 @@ footer .footer-content .contacts p {
   color: #f1cdb3;
 }
 
-footer .footer-content .contacts .title {
+.wrapper-footer footer .footer-content .contacts .title {
   font: 32px "Georgia", serif;
   color: white;
   font-weight: 400;
@@ -690,7 +733,7 @@ footer .footer-content .contacts .title {
   margin: 0;
 }
 
-footer .footer-content .contacts .mail {
+.wrapper-footer footer .footer-content .contacts .mail {
   max-width: 251px;
   width: 100%;
   min-height: 32px;
@@ -705,11 +748,11 @@ footer .footer-content .contacts .mail {
   text-decoration: none;
 }
 
-footer .footer-content .contacts .mail:visited {
+.wrapper-footer footer .footer-content .contacts .mail:visited {
   color: #f1cdb3;
 }
 
-footer .footer-content .contacts .phone {
+.wrapper-footer footer .footer-content .contacts .phone {
   max-width: 240px;
   width: 100%;
   min-height: 32px;
@@ -724,11 +767,11 @@ footer .footer-content .contacts .phone {
   text-decoration: none;
 }
 
-footer .footer-content .contacts .phone:visited {
+.wrapper-footer footer .footer-content .contacts .phone:visited {
   color: #f1cdb3;
 }
 
-footer .footer-content .locations {
+.wrapper-footer footer .footer-content .locations {
   max-width: 302px;
   width: 100%;
   min-height: 234px;
@@ -745,7 +788,7 @@ footer .footer-content .locations {
   margin-top: 17px;
 }
 
-footer .footer-content .locations .heading {
+.wrapper-footer footer .footer-content .locations .heading {
   max-width: 270px;
   width: 100%;
   min-height: 90px;
@@ -758,12 +801,12 @@ footer .footer-content .locations .heading {
   margin: 0;
 }
 
-footer .footer-content .locations img {
+.wrapper-footer footer .footer-content .locations img {
   width: 22px;
   height: 32px;
 }
 
-footer .footer-content .locations p {
+.wrapper-footer footer .footer-content .locations p {
   font: 32px "Georgia", serif;
   font-size: 20px;
   line-height: 23px;
@@ -772,8 +815,8 @@ footer .footer-content .locations p {
   color: #f1cdb3;
 }
 
-footer .footer-content .locations .boston,
-footer .footer-content .locations .london {
+.wrapper-footer footer .footer-content .locations .boston,
+.wrapper-footer footer .footer-content .locations .london {
   max-width: 302px;
   width: 100%;
   min-height: 46px;
@@ -787,20 +830,20 @@ footer .footer-content .locations .london {
   text-decoration: none;
 }
 
-footer .footer-content .locations .boston:visited,
-footer .footer-content .locations .london:visited {
+.wrapper-footer footer .footer-content .locations .boston:visited,
+.wrapper-footer footer .footer-content .locations .london:visited {
   color: #f1cdb3;
 }
 
-footer .footer-content .locations .boston {
+.wrapper-footer footer .footer-content .locations .boston {
   margin-top: 12px;
 }
 
-footer .footer-content .locations .london {
+.wrapper-footer footer .footer-content .locations .london {
   margin-top: -2px;
 }
 
-footer .footer-content img {
+.wrapper-footer footer .footer-content img {
   width: 300px;
   height: 310px;
 }
