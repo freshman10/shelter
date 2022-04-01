@@ -253,6 +253,8 @@
 
 .wrapper-pets .pets .pets-content .navigation .disabled:hover {
   cursor: default;
+  background-color: #f6f6f6;
+  border: 2px solid #cdcdcd;
 }
 
 .wrapper-pets .pets .pets-content .navigation .active {
@@ -261,6 +263,8 @@
 
 .wrapper-pets .pets .pets-content .navigation .active:hover {
   cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .wrapper-pets .pets .pets-content .navigation button {
@@ -285,6 +289,8 @@
 
 .wrapper-pets .pets .pets-content .navigation button:hover {
   cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .wrapper-pets .pets .pets-content .navigation button p {

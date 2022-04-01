@@ -215,6 +215,8 @@ $dark-color-1: #4c4c4c;
           border: 2px solid #cdcdcd;
           &:hover {
             cursor: default;
+            background-color: #f6f6f6;
+            border: 2px solid #cdcdcd;
           }
         }
 
@@ -222,6 +224,8 @@ $dark-color-1: #4c4c4c;
           background-color: #f1cdb3;
           &:hover {
             cursor: pointer;
+            background-color: #fddcc4;
+            border: 2px solid #fddcc4;
           }
         }
 
@@ -241,6 +245,8 @@ $dark-color-1: #4c4c4c;
 
           &:hover {
             cursor: pointer;
+            background-color: #fddcc4;
+            border: 2px solid #fddcc4;
           }
 
           p {
