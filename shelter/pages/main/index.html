@@ -15,6 +15,7 @@
             <div class="logo">
               <h1>Cozy House</h1>
               <p>Shelter for pets in Boston</p>
+              <a href="../main/index.html"></a>
             </div>
             <nav>
               <ul>
@@ -26,6 +27,11 @@
                 <li><a href="#contacts">Contacts</a></li>
               </ul>
             </nav>
+            <div class="burger">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
           </div>
         </header>
         <div class="wrapper-start-page">
@@ -37,9 +43,7 @@
               anybody else in the world, you will see!
             </p>
             <form>
-              <button formaction="../pets/index.html#start">
-                Make a friend
-              </button>
+              <button formaction="#pets">Make a friend</button>
             </form>
           </div>
           <img
@@ -49,6 +53,7 @@
         </div>
       </div>
     </div>
+
     <div class="about" id="about">
       <img src="../../assets/images/about-pets.png" alt="dog-and-cat" />
       <div class="about-content">
@@ -69,36 +74,57 @@
         </p>
       </div>
     </div>
+
     <div class="wrapper-pets">
       <div class="pets" id="pets">
         <p class="heading">Our friends who <br />are looking for a house</p>
-        <div class="slider">
-          <button class="left-btn">
-            <img src="../../assets/images/Arrow.png" alt="left-arrow" />
-          </button>
-          <div class="cards">
-            <div class="card card-1">
-              <img src="../../assets/images/pets-katrine.png" alr="gray cat" />
-              <p>Katrine</p>
-              <button class="btn-learn-more">Learn more</button>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <button class="left-btn">
+              <img src="../../assets/images/Arrow.png" alt="left-arrow" />
+            </button>
+            <div class="cards">
+              <div class="card card-1">
+                <img
+                  src="../../assets/images/pets-katrine.png"
+                  alr="gray cat"
+                />
+                <p>Katrine</p>
+                <form>
+                  <button class="btn-learn-more" formaction="#pets">
+                    Learn more
+                  </button>
+                </form>
+              </div>
+              <div class="card card-2">
+                <img
+                  src="../../assets/images/pets-jennifer.png"
+                  alr="cute puppy"
+                />
+                <p>Jennifer</p>
+                <form>
+                  <button class="btn-learn-more" formaction="#pets">
+                    Learn more
+                  </button>
+                </form>
+              </div>
+              <div class="card card-3">
+                <img
+                  src="../../assets/images/pets-woody.png"
+                  alr="cute puppy"
+                />
+                <p>Woody</p>
+                <form>
+                  <button class="btn-learn-more" formaction="#pets">
+                    Learn more
+                  </button>
+                </form>
+              </div>
             </div>
-            <div class="card card-2">
-              <img
-                src="../../assets/images/pets-jennifer.png"
-                alr="cute puppy"
-              />
-              <p>Jennifer</p>
-              <button class="btn-learn-more">Learn more</button>
-            </div>
-            <div class="card card-3">
-              <img src="../../assets/images/pets-woody.png" alr="cute puppy" />
-              <p>Woody</p>
-              <button class="btn-learn-more">Learn more</button>
-            </div>
+            <button class="right-btn">
+              <img src="../../assets/images/ArrowR.png" alt="right-arrow" />
+            </button>
           </div>
-          <button class="right-btn">
-            <img src="../../assets/images/ArrowR.png" alt="right-arrow" />
-          </button>
         </div>
         <form>
           <button formaction="../pets/index.html#start" class="get-rest-btn">
@@ -107,6 +133,7 @@
         </form>
       </div>
     </div>
+
     <div class="help" id="help">
       <div class="help-content">
         <p class="heading">How you can help our shelter</p>
@@ -164,7 +191,7 @@
             <p class="heading">You can also make a donation</p>
             <p class="subheading">Name of the bank / Type of bank account</p>
             <form>
-              <button formaction="#" class="credit-card">
+              <button formaction="#donation" class="credit-card">
                 <img src="../../assets/icons/credit-card.svg" />
                 <a>8380 2880 8028 8791 7435</a>
               </button>
