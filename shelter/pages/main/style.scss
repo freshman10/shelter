@@ -760,7 +760,6 @@ body {
       @include max-767-width {
         height: 52px;
         box-sizing: border-box;
-        padding-top: 42px;
       }
     }
 
@@ -781,7 +780,7 @@ body {
       }
 
       @include max-767-width {
-        margin-top: 0;
+        margin-top: 42px;
       }
 
       &:hover {
