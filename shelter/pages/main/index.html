@@ -59,11 +59,13 @@
           </div>
           <ul>
             <li>
-              <a class="--active-nav" href="#about">About the shelter</a>
+              <a class="--active-nav about_shelter_link" href="#start"
+                >About the shelter</a
+              >
             </li>
             <li><a href="../pets/index.html#start">Our pets</a></li>
-            <li><a href="#help">Help the shelter</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li><a class="help_link" href="#help">Help the shelter</a></li>
+            <li><a class="contacts_link" href="#contacts">Contacts</a></li>
           </ul>
         </div>
         <div class="darken-background"></div>
@@ -154,42 +156,42 @@
       <div class="help-content">
         <p class="heading">How you can help our shelter</p>
         <div class="img-list">
-          <div class="card pet-food">
+          <div class="card-help pet-food">
             <img src="../../assets/icons/pet-food.svg" alt="bag with food" />
             <p>Pet food</p>
           </div>
-          <div class="card transportation">
+          <div class="card-help transportation">
             <img src="../../assets/icons/transportation.svg" alt="Heavy car" />
             <p>Transportation</p>
           </div>
-          <div class="card toys">
+          <div class="card-help toys">
             <img src="../../assets/icons/toys.svg" alt="baseball" />
             <p>Toys</p>
           </div>
-          <div class="card bowls-and-cups">
+          <div class="card-help bowls-and-cups">
             <img src="../../assets/icons/bowls-and-cups.svg" alt="bowl" />
             <p>Bowls and cups</p>
           </div>
-          <div class="card shampoos">
+          <div class="card-help shampoos">
             <img src="../../assets/icons/shampoos.svg" alt="bootle" />
             <p>Shampoos</p>
           </div>
-          <div class="card vitamins">
+          <div class="card-help vitamins">
             <img src="../../assets/icons/vitamins.svg" alt="pills" />
             <p>Vitamins</p>
           </div>
-          <div class="card medicines">
+          <div class="card-help medicines">
             <img src="../../assets/icons/medicines.svg" alt="syringe" />
             <p>Medicines</p>
           </div>
-          <div class="card collars-leashes">
+          <div class="card-help collars-leashes">
             <img
               src="../../assets/icons/collars-or-leashes.svg"
               alt="collar with bone"
             />
             <p>Collars / leashes</p>
           </div>
-          <div class="card sleeping-areas">
+          <div class="card-help sleeping-areas">
             <img
               src="../../assets/icons/sleeping-area.svg"
               alt="house for dog"
@@ -260,6 +262,31 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal-window">
+      <div class="pets-card">
+        <form>
+          <button class="modal-close-btn">
+            <img src="../../assets/icons/close-btn.svg" alt="close-button" />
+          </button>
+        </form>
+        <div class="pets-content">
+          <img class="pets-image" src="../../assets/images/pets-jennifer.png" />
+          <div class="pets-stat">
+            <p class="pets-name"></p>
+            <p class="pets-breed"></p>
+            <p class="pets-description"></p>
+            <ul class="modal-list">
+              <li><p class="pets-age"></p></li>
+              <li><p class="pets-inoculations"></p></li>
+              <li><p class="pets-diseases"></p></li>
+              <li><p class="pets-parasites"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

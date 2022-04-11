@@ -772,7 +772,6 @@ body {
       border-radius: 100px;
       letter-spacing: 1px;
       border: none;
-
       margin-top: 60px;
 
       @include max-1279-width {
@@ -874,9 +873,10 @@ body {
         padding-bottom: 40px;
       }
 
-      .card {
+      .card-help {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         gap: 30px;
         @include max-1279-width {
@@ -1379,6 +1379,86 @@ body {
           width: 260px;
           height: 269px;
           padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  .pets-card {
+    max-width: 952px;
+    min-height: 552px;
+    width: 100%;
+
+    form {
+      display: flex;
+      justify-content: end;
+      .modal-close-btn {
+        background-color: transparent;
+        width: 52px;
+        height: 52px;
+        border: 2px solid #f1cdb3;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        border-radius: 100px;
+      }
+    }
+    .pets-content {
+      margin-left: 10px;
+      max-width: 900px;
+      min-height: 500px;
+      background-color: #f1cdb3;
+      display: flex;
+
+      .pets-image {
+        width: 500px;
+        height: 500px;
+        border-radius: 9px 0px 0px 9px;
+      }
+
+      .pets-stat {
+        max-width: 351px;
+        min-height: 362px;
+
+        .pets-name {
+          font-family: "Georgia";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 35px;
+          line-height: 130%;
+          letter-spacing: 0.06em;
+          color: #000000;
+        }
+        .pets-breed {
+          font-family: "Georgia";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #000000;
+        }
+
+        .pets-description {
+          font-family: "Georgia";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 110%;
+          letter-spacing: 0.06em;
+          color: #000000;
         }
       }
     }
