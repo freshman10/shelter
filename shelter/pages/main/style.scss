@@ -43,9 +43,9 @@ body {
 .wrapper-start {
   width: 100%;
   background-image: url("../../assets/images/start-screen-background.jpg");
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   .start-screen {
     max-width: 1280px;
     width: 100%;
@@ -1388,19 +1388,23 @@ body {
 .modal-window {
   position: fixed;
   top: 0;
-  z-index: 10;
   width: 100%;
   height: 100%;
+  z-index: 10;
   background-color: rgba(41, 41, 41, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+
+  &.hide {
+    z-index: -10;
+  }
 
   .pets-card {
     max-width: 952px;
     min-height: 552px;
     width: 100%;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
     form {
       display: flex;
@@ -1419,8 +1423,9 @@ body {
       margin-left: 10px;
       max-width: 900px;
       min-height: 500px;
-      background-color: #f1cdb3;
       display: flex;
+      background: #fafafa;
+      border-radius: 9px;
 
       .pets-image {
         width: 500px;
@@ -1431,6 +1436,8 @@ body {
       .pets-stat {
         max-width: 351px;
         min-height: 362px;
+        margin-top: 50px;
+        margin-right: 20px;
 
         .pets-name {
           font-family: "Georgia";
@@ -1440,6 +1447,9 @@ body {
           line-height: 130%;
           letter-spacing: 0.06em;
           color: #000000;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 10px;
         }
         .pets-breed {
           font-family: "Georgia";
@@ -1449,6 +1459,9 @@ body {
           line-height: 115%;
           letter-spacing: 0.06em;
           color: #000000;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 40px;
         }
 
         .pets-description {
@@ -1459,8 +1472,48 @@ body {
           line-height: 110%;
           letter-spacing: 0.06em;
           color: #000000;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 40px;
+        }
+        .modal-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 11px;
+
+          li::before {
+            content: "\2022";
+            color: #f1cdb3;
+            font-weight: bold;
+            display: inline-block;
+          }
+
+          li {
+            height: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Georgia";
+            font-style: normal;
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            color: #000000;
+          }
         }
       }
     }
   }
+}
+
+.white-bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
 }

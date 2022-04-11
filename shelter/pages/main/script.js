@@ -13,6 +13,8 @@ let petsData;
 const leftBtnSlider = document.querySelector(".left-btn");
 const rightBtnSlider = document.querySelector(".right-btn");
 const petCardsSlider = document.querySelectorAll(".card");
+const closeModalBtn = document.querySelector(".modal-close-btn");
+const modalWindow = document.querySelector(".modal-window");
 
 //functions
 function clickBurgerBtn(e) {
@@ -76,9 +78,10 @@ function clickSliderBtn(e) {
     }
     console.log(randomNumber);
   });
+}
 
-  //console.log(el.childNodes[3].innerText);
-  console.log(activeCards, activeNames);
+function openModal() {
+  modalWindow.classList.remove("hide");
 }
 
 // Event listners
@@ -94,3 +97,7 @@ contactsLink.addEventListener("click", closeBurgerMenu);
 [leftBtnSlider, rightBtnSlider].forEach((el) =>
   el.addEventListener("click", clickSliderBtn)
 );
+
+petCardsSlider.forEach((card) => {
+  card.addEventListener("click", openModal);
+});
