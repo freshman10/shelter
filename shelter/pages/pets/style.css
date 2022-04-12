@@ -418,6 +418,10 @@ body {
   border: 2px solid #fddcc4;
 }
 
+.wrapper-pets .pets .pets-content .navigation .active:hover {
+  cursor: auto;
+}
+
 .wrapper-pets .pets .pets-content .navigation button {
   width: 52px;
   height: 52px;

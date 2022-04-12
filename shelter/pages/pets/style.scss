@@ -346,6 +346,9 @@ body {
         .active {
           background-color: #fddcc4;
           border: 2px solid #fddcc4;
+          &:hover {
+            cursor: auto;
+          }
         }
 
         button {
