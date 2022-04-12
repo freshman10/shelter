@@ -1885,10 +1885,19 @@ body {
 
 .modal-window .pets-card {
   max-width: 952px;
-  min-height: 552px;
+  max-height: 552px;
   width: 100%;
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+@media (max-width: 1279px) {
+  .modal-window .pets-card {
+    margin-left: 69px;
+    margin-right: 69px;
+    max-width: 682px;
+    max-height: 402px;
+  }
 }
 
 .modal-window .pets-card form {
@@ -1915,20 +1924,36 @@ body {
   margin-left: 10px;
   max-width: 900px;
   min-height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-row: 1;
+  grid-row: 1fr;
   background: #fafafa;
   border-radius: 9px;
+  gap: 20px;
+}
+
+@media (max-width: 1279px) {
+  .modal-window .pets-card .pets-content {
+    max-width: 630px;
+    max-height: 350px;
+  }
 }
 
 .modal-window .pets-card .pets-content .pets-image {
-  width: 500px;
-  height: 500px;
+  margin: auto;
+  width: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   border-radius: 9px 0px 0px 9px;
 }
 
 .modal-window .pets-card .pets-content .pets-stat {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   max-width: 351px;
   min-height: 362px;
   margin-top: 50px;

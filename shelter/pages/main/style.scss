@@ -1402,9 +1402,16 @@ body {
 
   .pets-card {
     max-width: 952px;
-    min-height: 552px;
+    max-height: 552px;
     width: 100%;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+    @include max-1279-width {
+      margin-left: 69px;
+      margin-right: 69px;
+      max-width: 682px;
+      max-height: 402px;
+    }
 
     form {
       display: flex;
@@ -1423,17 +1430,27 @@ body {
       margin-left: 10px;
       max-width: 900px;
       min-height: 500px;
-      display: flex;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: 1fr;
       background: #fafafa;
       border-radius: 9px;
+      gap: 20px;
 
+      @include max-1279-width {
+        max-width: 630px;
+        max-height: 350px;
+      }
       .pets-image {
-        width: 500px;
-        height: 500px;
+        margin: auto;
+        width: 100%;
+        flex-shrink: 1;
         border-radius: 9px 0px 0px 9px;
       }
 
       .pets-stat {
+        flex-shrink: 1;
         max-width: 351px;
         min-height: 362px;
         margin-top: 50px;

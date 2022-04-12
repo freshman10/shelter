@@ -344,12 +344,8 @@ body {
         }
 
         .active {
-          background-color: #f1cdb3;
-          &:hover {
-            cursor: pointer;
-            background-color: #fddcc4;
-            border: 2px solid #fddcc4;
-          }
+          background-color: #fddcc4;
+          border: 2px solid #fddcc4;
         }
 
         button {

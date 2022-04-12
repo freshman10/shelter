@@ -15,9 +15,21 @@ const rightBtnSlider = document.querySelector(".right-btn");
 const petCardsSlider = document.querySelectorAll(".card");
 const closeModalBtn = document.querySelector(".modal-close-btn");
 const modalWindow = document.querySelector(".modal-window");
+const petsName = document.querySelector(".pets-name");
+const petsBreed = document.querySelector(".pets-breed");
+const petsDescription = document.querySelector(".pets-description");
+const petsAge = document.querySelector(".pets-age");
+const petsInoculations = document.querySelector(".pets-inoculations");
+const petdiseases = document.querySelector(".pets-diseases");
+const petsparasites = document.querySelector(".pets-parasites");
+const petsImage = document.querySelector(".pets-image");
 
 //functions
 function clickBurgerBtn(e) {
+  if (e.target === modalWindow) {
+    modalWindow.classList.add("hide");
+  }
+
   if (e.target === burgerButton || e.target.classList.contains("line")) {
     burgerMenu.classList.toggle("opened");
     burgerButton.classList.toggle("rotated");
@@ -63,7 +75,11 @@ fetch("../../assets/json/pets.json")
 
 function clickSliderBtn(e) {
   let activeCards = getVisibleElements(petCardsSlider);
-  let activeNames = activeCards.map((el) => el.childNodes[3].innerText);
+  let activeNames = activeCards.map((el) => {
+    el.classList.remove(el.childNodes[3].innerText);
+    return el.childNodes[3].innerText;
+  });
+
   activeCards.forEach((card) => {
     let randomNumber = getRandomNumber(petsData.length);
     while (true) {
@@ -73,6 +89,7 @@ function clickSliderBtn(e) {
         activeNames.push(petsData[randomNumber].name);
         card.childNodes[1].src = petsData[randomNumber].img;
         card.childNodes[3].innerText = petsData[randomNumber].name;
+        card.classList.add(petsData[randomNumber].name);
         break;
       }
     }
@@ -80,8 +97,38 @@ function clickSliderBtn(e) {
   });
 }
 
-function openModal() {
+function openModal(e) {
+  e.preventDefault();
+  console.log(e.path);
+  petCardsSlider.forEach((card) => {
+    if (e.path.includes(card)) {
+      console.log(card, card.childNodes[3].innerText, petsData);
+      petsData.forEach((pet) => {
+        if (pet.name === card.childNodes[3].innerText) {
+          console.log(pet);
+          petsName.innerHTML = pet.name;
+          petsBreed.innerHTML = `${pet.type} - ${pet.breed}`;
+          petsDescription.innerHTML = pet.description;
+          petsImage.src = pet.img;
+          petsAge.innerHTML = `<b>Age:</b> ${pet.age}`;
+          petsInoculations.innerHTML = `<b>Inoculations:</b> ${pet.inoculations.join(
+            ", "
+          )}`;
+          petdiseases.innerHTML = `<b>Diseases:</b> ${pet.diseases.join(", ")}`;
+          petsparasites.innerHTML = `<b>Parasites:</b> ${pet.parasites.join(
+            ", "
+          )}`;
+          console.log(pet.inoculations);
+        }
+      });
+    }
+  });
   modalWindow.classList.remove("hide");
+}
+
+function closeModal(e) {
+  e.preventDefault();
+  modalWindow.classList.add("hide");
 }
 
 // Event listners
@@ -101,3 +148,4 @@ contactsLink.addEventListener("click", closeBurgerMenu);
 petCardsSlider.forEach((card) => {
   card.addEventListener("click", openModal);
 });
+closeModalBtn.addEventListener("click", closeModal);

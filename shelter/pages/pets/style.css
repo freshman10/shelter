@@ -414,11 +414,6 @@ body {
 }
 
 .wrapper-pets .pets .pets-content .navigation .active {
-  background-color: #f1cdb3;
-}
-
-.wrapper-pets .pets .pets-content .navigation .active:hover {
-  cursor: pointer;
   background-color: #fddcc4;
   border: 2px solid #fddcc4;
 }
