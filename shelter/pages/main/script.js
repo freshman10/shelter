@@ -93,16 +93,14 @@ function clickSliderBtn(e) {
         break;
       }
     }
-    console.log(randomNumber);
   });
 }
 
 function openModal(e) {
   e.preventDefault();
-  console.log(e.path);
+  let path = (e.composedPath && e.composedPath()) || e.path;
   petCardsSlider.forEach((card) => {
-    if (e.path.includes(card)) {
-      console.log(card, card.childNodes[3].innerText, petsData);
+    if (path.includes(card)) {
       petsData.forEach((pet) => {
         if (pet.name === card.childNodes[3].innerText) {
           console.log(pet);
@@ -118,7 +116,6 @@ function openModal(e) {
           petsparasites.innerHTML = `<b>Parasites:</b> ${pet.parasites.join(
             ", "
           )}`;
-          console.log(pet.inoculations);
         }
       });
     }
@@ -138,6 +135,7 @@ window.addEventListener("resize", function (e) {
     closeBurgerMenu();
   }
 });
+darkenLayer.addEventListener("click", closeBurgerMenu);
 aboutTheShelterLink.addEventListener("click", closeBurgerMenu);
 helpTheShelterLink.addEventListener("click", closeBurgerMenu);
 contactsLink.addEventListener("click", closeBurgerMenu);

@@ -44,7 +44,8 @@ body {
     margin: 0 auto;
 
     @include max-1279-width {
-      margin: 0 10px;
+      box-sizing: border-box;
+      padding-left: 10px;
     }
 
     @include max-767-width {
@@ -62,14 +63,15 @@ body {
       margin: 0 auto;
 
       @include max-1279-width {
-        margin-left: 20px;
         margin-top: 0px;
+        padding-left: 20px;
+        box-sizing: border-box;
       }
 
       @include max-767-width {
         margin: 0;
-        margin: -9px 50px 10px 10px;
-        align-items: center;
+        padding: 0;
+
         box-sizing: border-box;
       }
 
@@ -89,6 +91,10 @@ body {
           margin: 0;
           padding-top: 30px;
           text-shadow: 0px 4px 4px rgba(31, 18, 18, 0.25);
+
+          @include max-767-width {
+            padding-top: 18px;
+          }
         }
         p {
           font: $arial;
@@ -115,7 +121,7 @@ body {
 
         @include max-1279-width {
           padding: 0;
-          margin-right: 60px;
+          margin-right: 30px;
         }
 
         @include max-767-width {
@@ -174,8 +180,8 @@ body {
           display: flex;
           flex-direction: column;
           gap: 8px;
-          margin-right: 62px;
-          padding-top: 12px;
+          margin-right: 52px;
+          padding-top: 4px;
         }
       }
     }
@@ -299,6 +305,11 @@ body {
             letter-spacing: 0.06em;
             text-align: center;
           }
+        }
+
+        .rotate {
+          transition: all 1s ease-in-out;
+          transform: rotateY(360deg);
         }
 
         @include max-1279-width {
