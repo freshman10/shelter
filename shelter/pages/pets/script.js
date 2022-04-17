@@ -89,11 +89,15 @@ function updatePaginationCards(newCards) {
     petsCards[i].animate(
       [
         // keyframes
-        { transform: "rotateY(360deg)" },
+        { opacity: 0 },
+        { opacity: 0.25 },
+        { opacity: 0.5 },
+        { opacity: 0.75 },
+        { opacity: 1 },
       ],
       {
         // timing options
-        duration: 1000,
+        duration: 500,
         iterations: 1,
       }
     );

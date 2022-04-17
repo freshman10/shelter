@@ -703,6 +703,7 @@ body {
         gap: 90px;
         box-sizing: border-box;
         justify-content: space-between;
+        transition: all 0.5s ease-in-out;
 
         @include max-1279-width {
           gap: 40px;

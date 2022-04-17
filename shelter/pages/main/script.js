@@ -23,6 +23,7 @@ const petsInoculations = document.querySelector(".pets-inoculations");
 const petdiseases = document.querySelector(".pets-diseases");
 const petsparasites = document.querySelector(".pets-parasites");
 const petsImage = document.querySelector(".pets-image");
+const disabledLinks = document.querySelectorAll(".disabled-links");
 
 //functions
 function clickBurgerBtn(e) {
@@ -90,6 +91,22 @@ function clickSliderBtn(e) {
         card.childNodes[1].src = petsData[randomNumber].img;
         card.childNodes[3].innerText = petsData[randomNumber].name;
         card.classList.add(petsData[randomNumber].name);
+        card.animate(
+          [
+            // keyframes
+            { opacity: 0 },
+            { opacity: 0.25 },
+            { opacity: 0.5 },
+            { opacity: 0.75 },
+            { opacity: 1 },
+          ],
+          {
+            // timing options
+            duration: 500,
+            iterations: 1,
+          }
+        );
+
         break;
       }
     }
@@ -147,3 +164,5 @@ petCardsSlider.forEach((card) => {
   card.addEventListener("click", openModal);
 });
 closeModalBtn.addEventListener("click", closeModal);
+
+disabledLinks.forEach((link) => (link.href = `#!`));
