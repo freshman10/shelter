@@ -314,6 +314,7 @@ body {
 
         @include max-1279-width {
           justify-content: center;
+          max-width: 708px;
           .card-7,
           .card-8 {
             display: none;
@@ -321,6 +322,7 @@ body {
         }
 
         @include max-767-width {
+          max-width: 300px;
           .card-4,
           .card-5,
           .card-6 {

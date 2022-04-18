@@ -378,6 +378,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 708px;
   }
   .wrapper-pets .pets .pets-content .cards-container .card-7,
   .wrapper-pets .pets .pets-content .cards-container .card-8 {
@@ -386,6 +387,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .wrapper-pets .pets .pets-content .cards-container {
+    max-width: 300px;
+  }
   .wrapper-pets .pets .pets-content .cards-container .card-4,
   .wrapper-pets .pets .pets-content .cards-container .card-5,
   .wrapper-pets .pets .pets-content .cards-container .card-6 {
