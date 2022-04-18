@@ -576,7 +576,7 @@ body {
   font: 32px "Georgia", serif;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 00.06em;
+  letter-spacing: 0.058em;
   font-weight: 400;
   color: #f1cdb3;
 }
@@ -642,6 +642,7 @@ body {
   gap: 20px;
   margin-top: 8px;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .wrapper-footer footer .footer-content .contacts .phone:visited {
