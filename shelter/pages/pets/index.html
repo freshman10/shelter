@@ -31,6 +31,34 @@
             <span class="line line2"></span>
             <span class="line line3"></span>
           </div>
+          <div class="burger-menu">
+            <div class="logo">
+              <h1>Cozy House</h1>
+              <p>Shelter for pets in Boston</p>
+              <a href="../main/index.html"></a>
+            </div>
+            <ul>
+              <li>
+                <a class="about_shelter_link" href="../main/index.html"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="our-pets-link">
+                <a class="--active-nav" href="../pets/index.html#start"
+                  >Our pets</a
+                >
+              </li>
+              <li>
+                <a class="help_link disabled-links" href="#!"
+                  >Help the shelter</a
+                >
+              </li>
+              <li>
+                <a class="contacts_link disabled-links" href="#!">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="darken-background"></div>
         </div>
       </header>
     </div>
@@ -41,7 +69,7 @@
             Our friends who<br />
             are looking for a house
           </h3>
-          <div class="cards-container">
+          <div class="cards-container Katrine">
             <div class="card card-1">
               <img
                 src="../../assets/images/pets-katrine.png"
@@ -50,7 +78,7 @@
               <p>Katrine</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-2">
+            <div class="card card-2 Jennifer">
               <img
                 src="../../assets/images/pets-jennifer.png"
                 alt="white-puppy"
@@ -58,7 +86,7 @@
               <p>Jennifer</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-3">
+            <div class="card card-3 Woody">
               <img
                 src="../../assets/images/pets-woody.png"
                 alt="labrador-retriver"
@@ -66,12 +94,12 @@
               <p>Woody</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-4">
+            <div class="card card-4 Sophia">
               <img src="../../assets/images/pets-sophie.png" alt="curly-dog" />
               <p>Sophia</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-5">
+            <div class="card card-5 Timmy">
               <img
                 src="../../assets/images/pets-timmy.png"
                 alt="light-gray-cat"
@@ -79,12 +107,12 @@
               <p>Timmy</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-6">
+            <div class="card card-6 Charly">
               <img src="../../assets/images/pets-charly.png" alt="old-dog" />
               <p>Charly</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-7">
+            <div class="card card-7 Scarlett">
               <img
                 src="../../assets/images/pets-scarlet.png"
                 alt="cute small puppy"
@@ -92,7 +120,7 @@
               <p>Scarlett</p>
               <button>Learn more</button>
             </div>
-            <div class="card card-8">
+            <div class="card card-8 Freddie">
               <img src="../../assets/images/pets-fredie.png" alt="sunny cat" />
               <p>Freddie</p>
               <button>Learn more</button>
@@ -149,6 +177,44 @@
         </div>
       </footer>
     </div>
+    <div class="modal-window hide">
+      <div class="pets-card">
+        <form>
+          <button class="modal-close-btn">
+            <img src="../../assets/icons/close-btn.svg" alt="close-button" />
+          </button>
+        </form>
+        <div class="pets-content">
+          <img class="pets-image" src="../../assets/images/pets-jennifer.png" />
+          <div class="pets-stat">
+            <p class="pets-name">Jennifer</p>
+            <p class="pets-breed">Dog - Labrador</p>
+            <p class="pets-description">
+              Jennifer is a sweet 2 months old Labrador that is patiently
+              waiting to find a new forever home. This girl really enjoys being
+              able to go outside to run and play, but won't hesitate to play up
+              a storm in the house if she has all of her favorite toys.
+            </p>
+            <ul class="modal-list">
+              <li>
+                <p class="pets-age"><b>Age:</b> 2 months</p>
+              </li>
+              <li>
+                <p class="pets-inoculations"><b>Inoculation:</b> none</p>
+              </li>
+              <li>
+                <p class="pets-diseases"><b>Diseases:</b> none</p>
+              </li>
+              <li>
+                <p class="pets-parasites"><b>Parasites:</b> none</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="white-bg"></div>
+
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

@@ -148,9 +148,7 @@ function closeModal(e) {
 // Event listners
 window.addEventListener("click", clickBurgerBtn);
 window.addEventListener("resize", function (e) {
-  if (!window.matchMedia("(min-width: 768px)")) {
-    closeBurgerMenu();
-  }
+  closeBurgerMenu();
 });
 darkenLayer.addEventListener("click", closeBurgerMenu);
 aboutTheShelterLink.addEventListener("click", closeBurgerMenu);
