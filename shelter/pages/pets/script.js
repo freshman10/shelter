@@ -46,7 +46,10 @@ const ourPetsLink = document.querySelector(".our-pets-link");
 // functions
 fetch("../../assets/json/pets.json")
   .then((response) => response.json())
-  .then((json) => (petsData = json));
+  .then((json) => {
+    petsData = json;
+    resetPagination();
+  });
 
 function detectClickedPaginationBtn(e) {
   let target;
