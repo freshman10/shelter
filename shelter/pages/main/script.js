@@ -12,7 +12,7 @@ const contactsLink = document.querySelector(".contacts_link");
 let petsData;
 const leftBtnSlider = document.querySelector(".left-btn");
 const rightBtnSlider = document.querySelector(".right-btn");
-const petCardsSlider = document.querySelectorAll(".card");
+let petCardsSlider = document.querySelectorAll(".item-center .card");
 const closeModalBtn = document.querySelector(".modal-close-btn");
 const modalWindow = document.querySelector(".modal-window");
 const petsName = document.querySelector(".pets-name");
@@ -24,6 +24,10 @@ const petdiseases = document.querySelector(".pets-diseases");
 const petsparasites = document.querySelector(".pets-parasites");
 const petsImage = document.querySelector(".pets-image");
 const disabledLinks = document.querySelectorAll(".disabled-links");
+const cards = document.querySelector(".cards");
+const itemLeft = document.querySelector(".item-left");
+const itemRight = document.querySelector(".item-right");
+const itemCenter = document.querySelector(".item-center");
 
 //functions
 function clickBurgerBtn(e) {
@@ -37,6 +41,14 @@ function clickBurgerBtn(e) {
     logoLabel.classList.toggle("logo-moved");
     darkenLayer.classList.toggle("bg-active");
     contentStartPage.classList.toggle("pushed_down");
+
+    if (burgerMenu.classList.contains("opened")) {
+      document.body.classList.add("scroll-disabled");
+      burgerMenu.classList.add("scroll-enabled");
+    } else {
+      document.body.classList.remove("scroll-disabled");
+      burgerMenu.classList.remove("scroll-enabled");
+    }
   }
 }
 
@@ -46,6 +58,8 @@ function closeBurgerMenu() {
   logoLabel.classList.remove("logo-moved");
   darkenLayer.classList.remove("bg-active");
   contentStartPage.classList.remove("pushed_down");
+  document.body.classList.remove("scroll-disabled");
+  burgerMenu.classList.remove("scroll-enabled");
 }
 
 function isVisible(e) {
@@ -74,12 +88,15 @@ fetch("../../assets/json/pets.json")
   .then((response) => response.json())
   .then((json) => (petsData = json));
 
-function clickSliderBtn(e) {
-  let activeCards = getVisibleElements(petCardsSlider);
+function changeItems(item) {
+  let elements = item.querySelectorAll(".card");
+  let activeCards = getVisibleElements(elements);
+
   let activeNames = activeCards.map((el) => {
     el.classList.remove(el.childNodes[3].innerText);
     return el.childNodes[3].innerText;
   });
+  console.log(activeNames);
 
   activeCards.forEach((card) => {
     let randomNumber = getRandomNumber(petsData.length);
@@ -88,28 +105,48 @@ function clickSliderBtn(e) {
         randomNumber = getRandomNumber(petsData.length);
       } else {
         activeNames.push(petsData[randomNumber].name);
+
         card.childNodes[1].src = petsData[randomNumber].img;
         card.childNodes[3].innerText = petsData[randomNumber].name;
         card.classList.add(petsData[randomNumber].name);
-        card.animate(
-          [
-            // keyframes
-            { opacity: 0 },
-            { opacity: 0.25 },
-            { opacity: 0.5 },
-            { opacity: 0.75 },
-            { opacity: 1 },
-          ],
-          {
-            // timing options
-            duration: 500,
-            iterations: 1,
-          }
-        );
-
         break;
       }
     }
+  });
+}
+
+function clickSliderBtn(e) {
+  e.preventDefault();
+  let path = (e.composedPath && e.composedPath()) || e.path;
+  rightBtnSlider.removeEventListener("click", clickSliderBtn);
+  leftBtnSlider.removeEventListener("click", clickSliderBtn);
+  petCardsSlider.forEach((card) => {
+    card.removeEventListener("click", openModal);
+  });
+  if (path.includes(rightBtnSlider)) {
+    cards.classList.add("transition-right");
+    changeItems(itemLeft);
+  } else if (path.includes(leftBtnSlider)) {
+    cards.classList.add("transition-left");
+    changeItems(itemRight);
+  }
+}
+
+function animationEnd(e) {
+  if (e.animationName === "move-left") {
+    cards.classList.remove("transition-left");
+    itemCenter.innerHTML = itemRight.innerHTML;
+    itemLeft.innerHTML = itemCenter.innerHTML;
+  } else if (e.animationName === "move-right") {
+    cards.classList.remove("transition-right");
+    itemCenter.innerHTML = itemLeft.innerHTML;
+    itemRight.innerHTML = itemCenter.innerHTML;
+  }
+  leftBtnSlider.addEventListener("click", clickSliderBtn);
+  rightBtnSlider.addEventListener("click", clickSliderBtn);
+  petCardsSlider = document.querySelectorAll(".item-center .card");
+  petCardsSlider.forEach((card) => {
+    card.addEventListener("click", openModal);
   });
 }
 
@@ -145,13 +182,18 @@ function closeModal(e) {
   modalWindow.classList.add("hide");
 }
 
+function menuScroll() {
+  if (burgerMenu.classList.contains("opened")) {
+    burgerButton.style.top = `${-burgerMenu.scrollTop}px`;
+  }
+}
+
 // Event listners
 window.addEventListener("click", clickBurgerBtn);
 window.addEventListener("resize", function (e) {
   closeBurgerMenu();
 });
 darkenLayer.addEventListener("click", closeBurgerMenu);
-aboutTheShelterLink.addEventListener("click", closeBurgerMenu);
 helpTheShelterLink.addEventListener("click", closeBurgerMenu);
 contactsLink.addEventListener("click", closeBurgerMenu);
 [leftBtnSlider, rightBtnSlider].forEach((el) =>
@@ -163,4 +205,8 @@ petCardsSlider.forEach((card) => {
 });
 closeModalBtn.addEventListener("click", closeModal);
 
-disabledLinks.forEach((link) => (link.href = `#!`));
+disabledLinks.forEach((el) => {
+  el.addEventListener("click", closeBurgerMenu);
+});
+cards.addEventListener("animationend", animationEnd);
+burgerMenu.addEventListener("scroll", menuScroll);

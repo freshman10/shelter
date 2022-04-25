@@ -214,6 +214,13 @@ function clickBurgerBtn(e) {
     burgerButton.classList.toggle("rotated");
     logoLabel.classList.toggle("logo-moved");
     darkenLayer.classList.toggle("bg-active");
+    if (burgerMenu.classList.contains("opened")) {
+      document.body.classList.add("scroll-disabled");
+      burgerMenu.classList.add("scroll-enabled");
+    } else {
+      document.body.classList.remove("scroll-disabled");
+      burgerMenu.classList.remove("scroll-enabled");
+    }
   }
 }
 
@@ -222,6 +229,8 @@ function closeBurgerMenu() {
   burgerButton.classList.remove("rotated");
   logoLabel.classList.remove("logo-moved");
   darkenLayer.classList.remove("bg-active");
+  document.body.classList.remove("scroll-disabled");
+  burgerMenu.classList.remove("scroll-enabled");
 }
 
 function openModal(e) {
@@ -256,6 +265,12 @@ function closeModal(e) {
   modalWindow.classList.add("hide");
 }
 
+function menuScroll() {
+  if (burgerMenu.classList.contains("opened")) {
+    burgerButton.style.top = `${-burgerMenu.scrollTop}px`;
+  }
+}
+
 // eventListners
 paginationBtns.forEach((btn) => {
   btn.addEventListener("click", clickPaginationBtn);
@@ -276,3 +291,4 @@ petCardsSlider.forEach((card) => {
   card.addEventListener("click", openModal);
 });
 closeModalBtn.addEventListener("click", closeModal);
+burgerMenu.addEventListener("scroll", menuScroll);

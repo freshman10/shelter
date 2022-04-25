@@ -195,7 +195,7 @@ body {
         }
       }
       .rotated {
-        transform: rotate(810deg);
+        transform: rotate(90deg);
         position: fixed;
         right: 3px;
         top: 4px;
@@ -957,4 +957,11 @@ body {
   height: 100%;
   background-color: white;
   z-index: -1;
+}
+
+.scroll-disabled {
+  overflow: hidden;
+}
+.scroll-enabled {
+  overflow: auto;
 }
