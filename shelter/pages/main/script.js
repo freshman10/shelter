@@ -28,11 +28,12 @@ const cards = document.querySelector(".cards");
 const itemLeft = document.querySelector(".item-left");
 const itemRight = document.querySelector(".item-right");
 const itemCenter = document.querySelector(".item-center");
+const modalBackground = document.querySelector(".white-bg");
 
 //functions
 function clickBurgerBtn(e) {
   if (e.target === modalWindow) {
-    modalWindow.classList.add("hide");
+    closeModal(e);
   }
 
   if (e.target === burgerButton || e.target.classList.contains("line")) {
@@ -96,7 +97,6 @@ function changeItems(item) {
     el.classList.remove(el.childNodes[3].innerText);
     return el.childNodes[3].innerText;
   });
-  console.log(activeNames);
 
   activeCards.forEach((card) => {
     let randomNumber = getRandomNumber(petsData.length);
@@ -150,6 +150,12 @@ function animationEnd(e) {
   });
 }
 
+function menuScroll() {
+  if (burgerMenu.classList.contains("opened")) {
+    burgerButton.style.top = `${-burgerMenu.scrollTop}px`;
+  }
+}
+
 function openModal(e) {
   e.preventDefault();
   let path = (e.composedPath && e.composedPath()) || e.path;
@@ -157,7 +163,6 @@ function openModal(e) {
     if (path.includes(card)) {
       petsData.forEach((pet) => {
         if (pet.name === card.childNodes[3].innerText) {
-          console.log(pet);
           petsName.innerHTML = pet.name;
           petsBreed.innerHTML = `${pet.type} - ${pet.breed}`;
           petsDescription.innerHTML = pet.description;
@@ -175,17 +180,20 @@ function openModal(e) {
     }
   });
   modalWindow.classList.remove("hide");
+  if (!modalWindow.classList.contains("hide")) {
+    document.body.classList.add("scroll-disabled");
+    modalWindow.classList.add("scroll-enabled");
+  } else {
+    document.body.classList.remove("scroll-disabled");
+    modalWindow.classList.remove("scroll-enabled");
+  }
 }
 
 function closeModal(e) {
   e.preventDefault();
   modalWindow.classList.add("hide");
-}
-
-function menuScroll() {
-  if (burgerMenu.classList.contains("opened")) {
-    burgerButton.style.top = `${-burgerMenu.scrollTop}px`;
-  }
+  document.body.classList.remove("scroll-disabled");
+  modalWindow.classList.remove("scroll-enabled");
 }
 
 // Event listners

@@ -206,7 +206,7 @@ function resetPagination() {
 
 function clickBurgerBtn(e) {
   if (e.target === modalWindow) {
-    modalWindow.classList.add("hide");
+    closeModal(e);
   }
 
   if (e.target === burgerButton || e.target.classList.contains("line")) {
@@ -240,7 +240,6 @@ function openModal(e) {
     if (path.includes(card)) {
       petsData.forEach((pet) => {
         if (pet.name === card.childNodes[3].innerText) {
-          console.log(pet);
           petsName.innerHTML = pet.name;
           petsBreed.innerHTML = `${pet.type} - ${pet.breed}`;
           petsDescription.innerHTML = pet.description;
@@ -258,11 +257,20 @@ function openModal(e) {
     }
   });
   modalWindow.classList.remove("hide");
+  if (!modalWindow.classList.contains("hide")) {
+    document.body.classList.add("scroll-disabled");
+    modalWindow.classList.add("scroll-enabled");
+  } else {
+    document.body.classList.remove("scroll-disabled");
+    modalWindow.classList.remove("scroll-enabled");
+  }
 }
 
 function closeModal(e) {
   e.preventDefault();
   modalWindow.classList.add("hide");
+  document.body.classList.remove("scroll-disabled");
+  modalWindow.classList.remove("scroll-enabled");
 }
 
 function menuScroll() {
