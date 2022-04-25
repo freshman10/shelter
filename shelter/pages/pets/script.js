@@ -271,11 +271,28 @@ function closeModal(e) {
   modalWindow.classList.add("hide");
   document.body.classList.remove("scroll-disabled");
   modalWindow.classList.remove("scroll-enabled");
+  closeModalBtn.style.background = "transparent";
+  document.body.style.cursor = "auto";
 }
 
 function menuScroll() {
   if (burgerMenu.classList.contains("opened")) {
     burgerButton.style.top = `${-burgerMenu.scrollTop}px`;
+  }
+}
+
+function highlightCloseModalBtn(e) {
+  if (
+    e.target.classList.contains("scroll-enabled") ||
+    e.target === closeModalBtn ||
+    e.target.classList.contains("close-img")
+  ) {
+    closeModalBtn.style.background = "#f1cdb3";
+    document.body.style.cursor = "pointer";
+  } else {
+    closeModalBtn.classList.remove("close-modal-hover");
+    closeModalBtn.style.background = "transparent";
+    document.body.style.cursor = "auto";
   }
 }
 
@@ -300,3 +317,4 @@ petCardsSlider.forEach((card) => {
 });
 closeModalBtn.addEventListener("click", closeModal);
 burgerMenu.addEventListener("scroll", menuScroll);
+modalWindow.addEventListener("mouseover", highlightCloseModalBtn);

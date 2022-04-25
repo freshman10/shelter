@@ -906,6 +906,7 @@ body {
 .wrapper-pets .pets .slider-wrapper .slider .left-btn:hover,
 .wrapper-pets .pets .slider-wrapper .slider .right-btn:hover {
   background-color: #f1cdb3;
+  cursor: pointer;
 }
 
 .wrapper-pets .pets .slider-wrapper .slider .cards-wrapper {
@@ -2102,6 +2103,13 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 100px;
+}
+
+.modal-window .pets-card form .modal-close-btn:hover {
+  background-color: #fddcc4;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {

@@ -792,6 +792,11 @@ body {
         background-repeat: no-repeat;
         box-sizing: border-box;
         border-radius: 100px;
+        &:hover {
+          background-color: #fddcc4;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+        }
       }
       @include max-767-width {
         right: -30px;

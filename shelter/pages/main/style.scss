@@ -696,6 +696,7 @@ body {
           &:hover {
             background-color: #f1cdb3;
             @extend %transition;
+            cursor: pointer;
           }
         }
         .cards-wrapper {
@@ -1547,6 +1548,7 @@ body {
       position: absolute;
       top: -52px;
       right: -43px;
+
       .modal-close-btn {
         background-color: transparent;
         width: 52px;
@@ -1555,6 +1557,11 @@ body {
         background-repeat: no-repeat;
         box-sizing: border-box;
         border-radius: 100px;
+        &:hover {
+          background-color: #fddcc4;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+        }
       }
       @include max-767-width {
         right: -30px;

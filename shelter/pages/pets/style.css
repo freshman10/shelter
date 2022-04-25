@@ -1011,6 +1011,13 @@ body {
   border-radius: 100px;
 }
 
+.modal-window .pets-card form .modal-close-btn:hover {
+  background-color: #fddcc4;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .modal-window .pets-card form {
     right: -30px;
